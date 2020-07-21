@@ -14,22 +14,23 @@ namespace DDPdfHtmlDocument
             var page = doc.NewPage();
             var g = page.Graphics;
 
-            var html = "<!DOCTYPE html>" +
-            "<html>" +
-            "<head>" +
-            "<style>" +
-            "p.round {" +
-            "font: 28px Yu Gothic;" +
-            "color: Blue;" +
-            "padding: 3px 5px 3px 5px;" +
-            "}" +
-            "</style>" +
-            "</head>" +
-            "<body>" +
-            "<p class='round'>Hello, World!</p>" +
-            "<p class='round'>こんにちは、DioDocs（ディオドック）です</p>" +
-            "</body>" +
-            "</html>";
+            var html = @"
+                <!DOCTYPE html>
+                <html>
+                  <head>
+                    <style>
+                        p.round {
+                        font: 28px Yu Gothic;
+                        color: Blue;
+                        padding: 3px 5px 3px 5px;
+                        }
+                    </style>
+                  </head>
+                  <body>
+                    <p class='round'>Hello, World!</p>
+                    <p class='round'>こんにちは、DioDocs（ディオドック）です</p>
+                  </body>
+                </html>";
 
             g.DrawHtml(html,
                        72,
